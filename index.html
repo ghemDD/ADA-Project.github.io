@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-     <!-- Include the Pyvis JavaScript library -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/7.5.0/vis.min.js"></script>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
 
@@ -23,17 +21,13 @@
   <p>Is Hollywood’s social network composition unique or do other movie industries follow suit ? Hollywood is the most famous movie production industry in the world. It has a reputation of being a high-class, exclusive and hard to get in environment. Having a good network is undoubtedly very important to make it there. Clubs, communities and social dynamics between actors, directors, and producers take shape within this environment</p>
   
   <p>What are the specifities of the composition and shape of the Hollywood social network ? Are they unique and part of its “identity” or is it a social network that all movie industries follow / or are bound to (Bollywood, Chinawood being other major movie industries). Through a “co-stardom graph” showing actors who played in the same movies, we will look at its evolution over time and compute different graph metrics (centrality,…), run cluster analysis and compare these metrics across different industries.</p>
-
-    <h2 id="American Movie Industry">The American Movie Industry</h2>
-
-    Here we include some of our initial analyses.
   
   <p></p>
   
   <h2 id="OfCharactersAndMen">Of Characters and Men</h2>
   
   <p> We begin our analysis with a part of the actors that exhibits pre dominant character tropes features : as we will see 
-    most of them are Hollywood actors featuring in successful movies (in average). Can you guess the top genres containing 
+    most of them are Hollywood actors featuring in successful movies (in average). Can you guess the top movie genres containing 
     the most character tropes ?
 
     <p><img src="images/top_genres.png" alt="image", width="100%", height="400px" /></p>
@@ -47,15 +41,13 @@
     of the films in which an actor/actress starred in (i.e the sum of the individual revenue). We next plot the ten most successful 
     actors that have a character trope : 
 
-
-    PCA ACTORS 
-
+    Next, we want to plot the Actor on a lower dimensional plan, using Principal Components Analysis :
     <p><img src="images/pca_actors.png" alt="image", width="80%", height="80%", left-margin="10px" /></p>
 
-    PCA ACTORS TOP 10
-
+    We can see an interesting plot when only selecting the top 10 actors : 
     <p><img src="images/pca_top_10.png" alt="image", width="80%", height="80%", left-margin="10px" /></p>
  
+    Next we compute the graph of the top 10 successful (global movie revenue) actors, and their direct co-cast relationship in an interactive graph in which you can select the node (actor name) you want to highlight (Tip: Zoom in to see the actor names).
     <div id="pyvis-visualization">
         <iframe src="actor_graph.html" width="100%", height="100%", scrolling="no"></iframe>
     </div>
@@ -100,18 +92,93 @@
 
   <p><img src="images/hollywood_en.jpg" alt="image", width="80%"/></p>
 
+  <p>
+    The Average geodesic distance for USA is 1.9047843371821496 <br>
+  The average clustering for USA is 0.621302986208149 <br>
+  The average diameter for USA is 2.0 <br>
+  The average brokerage for USA is 7404.7 <br>
+  </p>
+  
+
   <p><img src="images/uk_en.jpg" alt="image", width="80%"/></p>
 
+  <p>
+    The average diameter for UK is 2.0 <br>
+  The average clustering for UK is 0.725282581237031 <br>
+  The average brokerage for UK is 20310.555555555555 <br>
+  The Average geodesic distance for UK is 1.7431432656141395 <br>
+  </p>
+  
   <p><img src="images/bollywood_en.jpg" alt="image", width="80%"/></p>
+  
+  <p>
+    The average brokerage for India is 235.75 <br> 
+    The average clustering for India is 0.7333170074269646 <br>
+    The average diameter for India is 2.0 <br>
+    The Average geodesic distance for India is 1.3985930509308724 <br>
+  </p>
+  
 
   <p><img src="images/france_en.jpg" alt="image", width="80%"/></p>
+<p>
+  The average clustering for France is 0.938542413976621 <br>
+  The Average geodesic distance for France is 1.6208649502959767 <br>
+  The average brokerage for France is 4042.3 <br>
+  The average diameter for France is 1.9 <br>
+</p>
   
-  <h2 id="network a">Network analysis</h2>
-  
-  <p></p>
+
+  <p> The
+    average geodesic distance, being the mean of the shortest path lengths 
+   among all connected pairs in the ego network, informs us of the degree 
+   to which the nodes in the graph are connected to each other and how easy
+    it is to reach one node from another. India having the lowest average 
+   goedesic distance (india : 1.399, versus 
+   usa:1.908, uk:1.743, fr:1.621), 
+   we deduce that it is the country where actors are the most connected and
+    where it is easy to reach one actor from another. It indicate that the 
+   successfull actors are more connected and have a stronger sense of 
+   community. Whereas it is less the case for the three other countries.</p>
+
+<p>
+  The
+  average diameter, being the average length of the longest path between 
+ connected actors for the four countries is not considerably different 
+ (fr : 1.9, uk:2, usa:2, india:2), hence we can conclude from this regard
+  any specific information on the difference in the connection of actor 
+ in the graphs.
+ 
+ Here
+  the value of the average brokerage can inform us the overall influence 
+ of nodes in a network, a high average brokerage informs that in the 
+ industry of the given country, on average there are more very 
+ influencial actors, that connect diffenrent group/communities together. 
+ Which makes them very important actors to know (try at least). We see 
+ from our results that the average value of the brokerage in the USA, UK 
+ and France in high (7404, 20310, 4042, respectively), whereas this value
+  is much (much) lower in India (235).
+</p>
+
+<p>
+  Finally,
+  we analyze the clustering coefficient. A higher clustering coefficient 
+ indicates that the node's neighbors are more connected to each other and
+  that there are more triangles in the neighborhood of the node. France 
+ is the country with the highest clustering coefficient 
+ (0.939, vs usa:0.621, uk:0.725, 
+ India:0.733), and we can clearly see on its ego network 
+ graphs that the structures are overall more triabgular. 
+ Lower clustering coefficient indicates that the node's neighbors are 
+ less connected to each other and that there are fewer triangles in the 
+ neighborhood of the node. We can also clearly see that on the other's 
+ countries' ego graphs.
+</p>
   
   <h2 id="Conclusion">Conclusion</h2>
-  
+  <p>
+    Overall, these co-stardom networks provide a unique glimpse into the structures and dynamics of the Hollywood and Bollywood film industries. It's always fascinating to see how different industries operate and these networks give us a new way of looking at things. Who knows what other insights we'll uncover as we continue to analyze these networks in the future?
+  </p>
+
 </div>
   
         </footer>

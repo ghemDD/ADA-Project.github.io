@@ -55,8 +55,7 @@
     PCA ACTORS TOP 10
 
     <p><img src="images/pca_top_10.png" alt="image", width="80%", height="80%", left-margin="10px" /></p>
-
-    TOP 20 ACTORS GRAPH 
+ 
     <div id="pyvis-visualization">
         <iframe src="actor_graph.html" width="100%", height="100%", scrolling="no"></iframe>
     </div>
@@ -77,67 +76,28 @@
   This shows that actors in Bollywood are more likely to work with the same colleagues over and over.
   </p>
   
-  <p></p>
-  
-  <p></p>
-  
-
-  <p></p>
-  
-  <p></p>
-  
-  <p></p>
-  
   <p><img src="images/ney.jpg" alt="image" /></p>
-  
-  <p></p>
   
   <h2 id="what-does-the-pope-say">What does the pope say?</h2>
   
-  <p>We were also interested by the way the pope expresses himself. First, we compiled his most commonly used words, their size corresponding to their frequency of occurence, outside of stop words such as “the’, “and” or “but” :</p>
+  <h2 id="network a">Network analysis</h2>
   
-  <p>We can appreciate how those words are coherent with our previous lexical fields results.</p>
-  
-  <p>Next, we were also curious to see how the pope’s lexical fields co-occur within his statements. To do so, we counted the times when each pair of lexical fields co-occured within one of the pope’s 100’000 quotes and visualized the most common pairs with a network plot. In the following figure, each node is one lexical field, the node size correspond to the overall importance of the lexical field along the pope’s corpus and finally the edges widths correspond to the frequency of co-occurence of a pair of lexical fields: the larger, the more frequent. To produce a more readable plot, we only show the co-occurences that happened at least 5’000 times. The most important pair (<em>worship</em> and <em>divine</em>) can be found in one quarter of the pope’s quotes.</p>
-  
-  <p>The lexical fields that co-occur the most frequently are the religous ones: <em>worship</em>, <em>divine</em> and <em>religion</em>. Then we can see that the family-related lexical fields (<em>family</em>, <em>children</em>, <em>home</em>) co-occur together pretty often while the positive emotions related fields (<em>positive emotions</em>, <em>optimism</em>, <em>love</em>) co-occur together too. Moreover, it seems that the lexical fields of <em>positive emotions</em>, <em>worship</em> and <em>divine</em> act like hub nodes and connect several of the other fields which mean that those topics are quite central in the pope’s language. Finally, we can also notice that all the politics-related topics (<em>leader</em>, <em>business</em>, <em>politics</em>, <em>government</em>, …), besides appearing quite rarely in the pope’s statements, barely co-occur with any of the pope’s other lexical fields. In other words, the pope does not seem to disguise political opinions as religious statements.</p>
-  
-  <h2 id="can-we-place-the-pope-on-a-political-spectrum">Can we place the pope on a political spectrum?</h2>
-  
-  <p>Our main approach to place the pope on the american political spectrum consisted in applying a dimensionality reduction method on several meaningful features extracted from the quotes corpus of each of our spearkers of interest. Initially, we extracted more than 200 features related to the lexical fields usage, vocabulary richness and personnal pronouns usage for each speakers. After feature selection, only 29 features were kept and used to perform a principal component analysis (PCA):</p>
+  <p></p>
   
   <p><img src="images/ney.png" alt="image" /></p>
   
-  <p>The obtained results are interesting for several reasons:</p>
-  <ul>
-    <li>All the politicians are more or less aligned along one single spectrum</li>
-    <li>Democrats and Republicans are nicely separated</li>
-    <li>The pope is far away from all politicians</li>
-    <li>Principal component 1 is nicely capturing the Democrats vs Republicans spectrum</li>
-    <li>Principal component 2 seems to capture the pope’s uniqueness</li>
-  </ul>
-  
-  <p>Then we moved on interpreting more precisely what our two principal components capture:</p>
-  
   <p><img src="images/ney.jpg" alt="image" /></p>
   
-  <p>We can observe that our first component discriminates the Republicans from the Democrats by capturing the scores of lexical fields such as <em>terrorism</em> and <em>military</em> for the Republican side, and <em>youth</em> and <em>children</em> for the Democrats side. Along this specific axis, the pope is placed in a central position.</p>
+  <h2 id="Conclusion">Conclusion</h2>
   
-  <p>Our second component discriminates the pope from the politicians notably by capturing the scores of the lexical fields <em>divine</em> and <em>optimism</em> for the pope side, and the scores of the lexical fields <em>politics</em>, <em>blue collar jobs</em>, <em>occupation</em> and <em>leader</em> for the politicians side. In other words, this component differentiates the pope from the rest of the speakers by his extensive use of religious terms and by his rare use of political terms. For example the lexical fields <em>blue collar jobs</em>, <em>occupation</em> and <em>politics</em> include terms like “retirement”, “employment”, “job”, “worker”, “salary”, “nation”, “democracy” or “election”.</p>
-  
-  <h2 id="conclusion">Conclusion</h2>
-  
-  <p>We can determine from our analysis that even though the pope shares some traits with both political parties, he does not appear to talk like a true politician from the America political spectrum. However, this does not mean that he has no influence on societal and political issues. Indeed, our approach is not bullet-proof as a quote can have a low score for the politics-related lexical fields but still present a strong political opinion. For example, when the pope speaks about an issue like abortion:</p>
+  <p></p>
   
   <blockquote>
-    <p>“It is horrific even to think that there are children, victims of abortion, who will never see the light of day.”</p>
+    <p></p>
   </blockquote>
   
-  <p>For this quote, the detected lexical fields are <em>horror</em>, <em>health</em>, <em>suffering</em>, <em>fire</em> and <em>torment</em>. These categories are not directly related to politics but we cannot minimize the decisive influence that the pope has on the abortion ban in countries with an important catholic population.</p>
-  
-  <p>In conclusion, we can ask whether an analysis based on quotes relayed by the press allows for an accurate analysis of a speaker. Indeed, there may be a journalistic bias towards polemic and sensationalist quotes to increase the website viewership. Therefore, it is possible that the quotes from the Quotebank dataset do not always faithfully represent their authors opinions.</p>
-  
-  <h3 id="one-last-word">One last word</h3>
+  <p></p>
+  <p></p>
   
   <p><img src="images/ney.jpg" width="80%" height="80%" /></p>
 </div>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
 
-    <link rel="stylesheet" type="text/css" href="style_ign.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <main id="content" class="main-content" role="main">
         <header class="page-header" role="banner">
             <h1 class="project-name">The Social Network : a Hollywood Story</h1>
@@ -60,14 +60,36 @@
         <iframe src="actor_graph.html" width="100%", height="100%", scrolling="no"></iframe>
     </div>
   </p>
-
-  
-  
-  <p><img src="images/ney.jpg" alt="image" /></p>
-  
-  <p></p>
   
   <h2 id="Network Analysis">Network Analysis</h2>
+
+  <h3 id="Community detection"> Community Detection</h3>
+
+  <p> Upon examining the co-stardom graphs of Hollywood and Bollywood, it is evident that there are significant differences in the structures of the networks. *
+    The Hollywood graph displays multiple distinct communities, while the Bollywood graph is centered around a single central community with several smaller communities in close proximity.</p>
+
+    <p><img src="images/hollywood_network.png" alt="image", width="80%"/></p>
+
+    <p>One possible explanation for this difference is that the Hollywood film industry may be more collaborative, with actors frequently working together on multiple projects and forming strong connections as a result. 
+      The presence of multiple distinct communities in the Hollywood network suggests that there are different groups of actors who frequently work together and may be more closely tied to one another than actors in other communities.</p>
+
+    <p><img src="images/bollywood_network.png" alt="image", width="80%"/></p>
+
+    <p>
+      On the other hand, the centralized structure of the Bollywood network may indicate a hierarchical system in which a select group of actors hold more power and influence within the industry. 
+      The smaller communities surrounding the central community may represent actors who are connected to this group in some way, either through shared projects or personal relationships.
+    </p>
+
+    <p><img src="images/hollywood_cd.png" alt="image", width="80%"/></p>
+
+    <p>
+      It is also worth noting that there are many nodes in the Bollywood network that are excluded from any particular community. 
+      This may suggest that there are actors in Bollywood who are less connected to other actors in the industry, or who are not as closely tied to any particular group or community.
+    </p>
+
+    <p><img src="images/bollywood_cd.png" alt="image", width="80%"/></p>
+
+    <h3 id="Ego Network"> Ego Network</h3>
   
   <p>
     Once we had the co-stardom graphs for Hollywood and Bollywood, we compared them using different centrality measures and network analysis techniques. 
@@ -75,31 +97,21 @@
   This means that actors in Hollywood tend to work with more people. We also found that the clustering coefficient, or the measure of how much actors cluster together in groups, was higher in Bollywood. 
   This shows that actors in Bollywood are more likely to work with the same colleagues over and over.
   </p>
-  
-  <p><img src="images/ney.jpg" alt="image" /></p>
-  
-  <h2 id="what-does-the-pope-say">What does the pope say?</h2>
+
+  <p><img src="images/hollywood_en.jpg" alt="image", width="80%"/></p>
+
+  <p><img src="images/uk_en.jpg" alt="image", width="80%"/></p>
+
+  <p><img src="images/bollywood_en.jpg" alt="image", width="80%"/></p>
+
+  <p><img src="images/france_en.jpg" alt="image", width="80%"/></p>
   
   <h2 id="network a">Network analysis</h2>
   
   <p></p>
   
-  <p><img src="images/ney.png" alt="image" /></p>
-  
-  <p><img src="images/ney.jpg" alt="image" /></p>
-  
   <h2 id="Conclusion">Conclusion</h2>
   
-  <p></p>
-  
-  <blockquote>
-    <p></p>
-  </blockquote>
-  
-  <p></p>
-  <p></p>
-  
-  <p><img src="images/ney.jpg" width="80%" height="80%" /></p>
 </div>
   
         </footer>

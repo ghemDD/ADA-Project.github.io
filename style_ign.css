@@ -1,0 +1,49 @@
+/* Set the font family for the page */
+      .page-header {
+        text-align: center;  /* Center the text */
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #ffffff;
+      }
+
+      #pyvis-visualization {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      /* Create a banner with the IGN logo and a header */
+      .banner {
+        height: 50px;  /* Set the banner to a fixed height */
+        width: 100%;   /* Set the banner to take up the full width of the page */
+        background-color: #002366;  /* Set the background color to IGN blue */
+        color: #ffffff;  /* Set the text color to white */
+        display: flex;  /* Use flexbox layout for the banner */
+        align-items: center;  /* Center the elements vertically */
+        text-align: center;
+      }
+      .banner img {
+        height: 40px;  /* Set the height of the IGN logo */
+        margin: 0 10px;  /* Add some space between the logo and the header */
+      }
+      .banner h1 {
+        font-size: 18px;  /* Set the font size for the header */
+        margin: 0;  /* Remove the default margin for the header */
+      }
+
+      /* Create a container for the article content */
+      .article {
+        max-width: 70%;  /* Set a maximum width for the container */
+        margin: 0 auto;  /* Center the container horizontally */
+        padding: 20px;  /* Add some padding around the content */
+      }
+      .article h2 {
+        font-size: 24px;  /* Set the font size for the article title */
+        margin-bottom: 10px;  /* Add some space between the title and the body */
+      }
+      .article p {
+        font-size: 16px;  /* Set the font size for the article body */
+        line-height: 1.5;  /* Set the line height for the article body */
+      }
